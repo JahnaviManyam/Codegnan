@@ -1,49 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Login</title>
+    <title>calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Logo</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" class="login-btn">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="login-container">
-        <div class="login-box">
-            <button class="close-btn" aria-label="Close Login">×</button>
-            <h2>Login</h2>
-            <form id="loginForm">
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
-                <div class="options">
-                    <label><input type="checkbox" id="rememberMe"> Remember me</label>
-                    <a href="#">Forgot password?</a>
-                </div>
-                <button type="submit" class="login-btn">Login</button>
-            </form>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button onclick="clearDisplay()">AC</button>
+            <button onclick="lastCharacter()">DE</button>
+            <button onclick="appear('%')">%</button>
+            <button onclick="appear('/')">/</button>
+            <button onclick="appear('7')">7</button>
+            <button onclick="appear('8')">8</button>
+            <button onclick="appear('9')">9</button>
+            <button onclick="appear('*')">*</button>
+            <button onclick="appear('4')">4</button>
+            <button onclick="appear('5')">5</button>
+            <button onclick="appear('6')">6</button>
+            <button onclick="appear('-')">-</button>
+            <button onclick="appear('1')">1</button>
+            <button onclick="appear('2')">2</button>
+            <button onclick="appear('3')">3</button>
+            <button onclick="appear('+')">+</button>
+            <button onclick="appear('00')">00</button>
+            <button onclick="appear('0')">0</button>
+            <button onclick="appear('.')">.</button>
+            <button id="equal" onclick="result()">=</button>
+            <script src="script.js"></script>
+            
         </div>
-    </main>
-
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
-
